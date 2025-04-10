@@ -97,12 +97,38 @@ Click the boxes to deny ICMP traffic and make the Priority 290 (the highest avai
 
 ![image](https://github.com/user-attachments/assets/ac4fbfcb-f17e-41a9-aeca-52a2d88b7822)
 
-<p align="circles">
+<p align="center">
+You can now see the request from the Windows VM with no response from the Linux VM:
+
+![image](https://github.com/user-attachments/assets/e03d1e2f-428d-4f94-a345-6c4341613330)
+
+<p align="center">
+Now we will delete the rule and observe the traffic start up again:
+
+![image](https://github.com/user-attachments/assets/10bb74b7-46af-4851-8b93-26eacf8788cb)
+
+![image](https://github.com/user-attachments/assets/e32dc44b-54e9-46c1-995a-755fe0a03921)
+
+<p align="center">
+Creating a SSH (Secure Shell) connection between the Windows VM and the Linux VM and observing the traffic.  In the Windows VM, open Wireshark and and type "ssh" in the search bar to only capture SSH traffic.  Open Powershell and type "ssh DemoDan@10.0.0.9" (Username and private IP address for the Linux VM), press enter, then enter the password for the Linux VM:
+
+![image](https://github.com/user-attachments/assets/debe6304-0b40-454c-8f34-1e28f674ca95)
+
+<p align="center">
+Notice the traffic is encrypted:
+
+![image](https://github.com/user-attachments/assets/7aae95bf-34f8-4f86-8c42-aa2b02a3a50c)
+
+<p align="center">
+Requesting a new IP address and observing DHCP traffic.  In Wireshark, filter to only show DHCP traffic.  In Powershell, type "ipconfig /renew":
+
+![image](https://github.com/user-attachments/assets/7e734a2b-945b-4f58-b086-5e26bf684bad)
+
+<p align="center">
+Observe DNS traffic by filtering for "dns".  In Powershell, type "nslookup disney.com":  
+
+![image](https://github.com/user-attachments/assets/49e6d7d4-36c1-4707-9d0d-7d6700c26f98)
 
 
-
-
-
-
-
+<h2>Azure Virtual Machines and Networking Complete!</h2>
 
